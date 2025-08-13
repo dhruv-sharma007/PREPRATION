@@ -57,7 +57,7 @@ void SelectionSort(int arr[], int n)
     {
         int min = i;
 
-        for (int j = 0; j < n; j++)
+        for (int j = i + 1; j < n; j++)
         {
             if (arr[min] > arr[j])
             {
