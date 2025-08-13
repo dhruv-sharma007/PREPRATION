@@ -21,6 +21,11 @@ int main(int argc, char const *argv[])
     printf("After reverse\n");
     reverseList(&ls);
     printList(&ls);
+    
+    printf("After Deleting Two Nodes\n");
+    deleteEndingNode(&ls);
+    deleteStartingNode(&ls);
+    printList(&ls);
 
     return 0;
 }

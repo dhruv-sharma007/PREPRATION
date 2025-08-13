@@ -94,12 +94,27 @@ void deleteEndingNode(LinkedList *ls)
         printf("No Node found to delete");
         return;
     }
+    /**
+     * Critical issue if we try to delete the tail node also we have to
+     * Make null to prevoius node froom tail otherwise it will give us garbage value
+     * In singly linked List we only can do this by traversing to previous to last node
+     * but thi will make time complexity O(n-1) and this is not sufficient
+     * we have to use doublyLinkedList for this for efficent deletion.
+     */
 
-    Node *temp = ls->tail;
+    Node *current = ls->head;
 
-    ls->tail = NULL;
-    free(temp);
-    return;
+    while (current->next != NULL)
+    {
+        if (current->next->next == NULL)
+        {
+            current->next = NULL;
+            free(ls->tail);
+            ls->tail = current;
+            return;
+        }
+        current = current->next;
+    }
 }
 
 void printList(LinkedList *ls)
