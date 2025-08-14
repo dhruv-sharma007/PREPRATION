@@ -1,4 +1,4 @@
-# Preprations and learning for Game dev role
+# Preprations and learning 
 
 ```
 /algorithms   <-- Searching and Sorting algos
