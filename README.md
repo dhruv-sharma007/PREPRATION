@@ -1,6 +1,15 @@
 # Preprations and learning 
 
 ```
-/algorithms   <-- Searching and Sorting algos
-/data_structures <-- hashset, hashMap, linkedList, Trees
+/dsa
+    -> /algorithms   <-- Searching and Sorting algos
+        -> Searching (Linear Search, Binary Search)
+        -> Sorting (Bubble Sort, Insertion SOrt, Selection Sort, Quick Sort)
+    
+    -> /data_structures 
+        -> LinkedList
+        -> DoublyLinkedList
+        -> HashMap
+        -> HashSet
+
 ```
