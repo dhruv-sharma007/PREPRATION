@@ -1,4 +1,5 @@
 #include "Sorting.h"
+#include <stdbool.h>
 
 void swap(int *a, int *b)
 {
@@ -71,3 +72,43 @@ void SelectionSort(int arr[], int n)
         }
     }
 }
+
+// Quick Sort Starts Here
+
+int Partition(int arr[], int low, int high)
+{
+    int pivot = arr[low];
+    int i = low;
+    int j = high;
+    while (i < j)
+    {
+        do
+        {
+            i++;
+        } while (arr[i] < pivot);
+        do
+        {
+            j--;
+        } while (arr[j] > pivot);
+
+        if (i < j)
+        {
+            swap(&arr[i], &arr[j]);
+        }
+    }
+    swap(&arr[low], &arr[j]);
+
+    return j;
+}
+
+void QuickSort(int arr[], int low, int high)
+{
+    if (low < high)
+    {
+        int j = Partition(arr, low, high);
+        QuickSort(arr, low, j);
+        QuickSort(arr, j + 1, high);
+    }
+}
+
+// Quick Sort Ends Here

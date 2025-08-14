@@ -9,6 +9,8 @@
         "limits": "cpp",
         "new": "cpp",
         "stdlib.h": "c",
-        "linkedlist.h": "c"
+        "linkedlist.h": "c",
+        "doublylinkedlist.h": "c",
+        "server.h": "c"
     }
 }
