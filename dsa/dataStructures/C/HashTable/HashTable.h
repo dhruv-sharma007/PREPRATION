@@ -4,7 +4,8 @@
 #include<stdbool.h>
 #define Max_Key 256
 #define Table_Size 16
-typedef struct Bucket
+
+    typedef struct Bucket
 {
     char key[Max_Key];
     int value;
